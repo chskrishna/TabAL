@@ -1,0 +1,6 @@
+{
+  "budgets_per_trajectory": 15,
+  "representation": "ecfp4",
+  "trajectories": 600,
+  "valid": true
+}

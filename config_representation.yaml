@@ -1,0 +1,81 @@
+study:
+  name: molecular_active_learning_representation_extension
+  split_seed: 42
+  split_fractions: [0.7, 0.1, 0.2]
+
+paths:
+  processed_dir: data/processed
+  results_dir: results
+  checkpoint: models/tabpfn-v2.5-classifier-v2.5_default-2.ckpt
+  checkpoint_sha256: 2d0fbd257a5a274f2a219836d5a68e9c27224845936b4685d85dd42e2b8092aa
+
+datasets:
+  DILI: {loader: Tox, name: DILI}
+  HIA_Hou: {loader: ADME, name: HIA_Hou}
+  Bioavailability_Ma: {loader: ADME, name: Bioavailability_Ma}
+  Pgp_Broccatelli: {loader: ADME, name: Pgp_Broccatelli}
+  BBB_Martins: {loader: ADME, name: BBB_Martins}
+
+fingerprint:
+  radius: 2
+  n_bits: 1024
+  use_chirality: false
+  use_features: false
+
+models:
+  tabpfn:
+    n_estimators: 8
+    balance_probabilities: false
+    device: auto
+  random_forest:
+    n_estimators: 500
+    max_depth: null
+    max_features: sqrt
+    min_samples_leaf: 1
+    bootstrap: true
+    class_weight: null
+    n_jobs: -1
+  xgboost:
+    objective: binary:logistic
+    eval_metric: logloss
+    n_estimators: 300
+    learning_rate: 0.05
+    max_depth: 4
+    min_child_weight: 1
+    subsample: 0.8
+    colsample_bytree: 0.8
+    gamma: 0
+    reg_alpha: 0
+    reg_lambda: 1
+    tree_method: hist
+  lightgbm:
+    objective: binary
+    n_estimators: 300
+    learning_rate: 0.05
+    num_leaves: 31
+    max_depth: -1
+    min_child_samples: 5
+    subsample: 0.8
+    subsample_freq: 1
+    colsample_bytree: 0.8
+    reg_alpha: 0
+    reg_lambda: 1
+    verbosity: -1
+    deterministic: true
+    force_col_wise: true
+    n_jobs: -1
+
+active_learning:
+  seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  initial_size: 32
+  batch_size: 16
+  final_budget: 256
+  entropy_shortlist: 160
+  initial_resampling: consecutive_generator_draws
+  tie_breaking: seeded_fixed_random_order
+
+evaluation:
+  deterministic_comparison_excludes_runtimes: true
+  within_batch_similarity: mean_all_unordered_pairs
+  bootstrap_samples: 10000
+  bootstrap_seed: 42

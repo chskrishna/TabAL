@@ -1,0 +1,8 @@
+# Manifests hash the exact frozen configuration bytes used on the run host.
+config_representation.yaml text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.json text eol=lf
+*.csv text eol=lf
+*.tex text eol=lf

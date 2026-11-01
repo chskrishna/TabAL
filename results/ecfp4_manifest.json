@@ -1,0 +1,27 @@
+{
+  "configuration_hash": "ac4e8db99f16edb2e9a4eb9c54f861e0b4e23b5b65b2f12e75b0c9afc5be8431",
+  "hardware": {
+    "cuda_available": true,
+    "gpu": "NVIDIA RTX A4000",
+    "machine": "AMD64",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel"
+  },
+  "package_versions": {
+    "PyTDC": "1.1.15",
+    "lightgbm": "4.7.0",
+    "matplotlib": "3.10.5",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "rdkit": "2023.9.6",
+    "scikit-learn": "1.7.2",
+    "scipy": "1.16.1",
+    "tabpfn": "8.4.0",
+    "torch": "2.13.0+cu126",
+    "xgboost": "3.0.5"
+  },
+  "representation": "ecfp4",
+  "tabpfn_checkpoint_identity": "tabpfn-v2.5-classifier-v2.5_default-2.ckpt",
+  "tabpfn_checkpoint_sha256": "2d0fbd257a5a274f2a219836d5a68e9c27224845936b4685d85dd42e2b8092aa",
+  "timestamp_utc": "2026-08-27T18:18:44.701466+00:00"
+}

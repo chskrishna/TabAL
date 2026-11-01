@@ -1,0 +1,6 @@
+{
+  "budgets_per_trajectory": 15,
+  "representation": "rdkit2d",
+  "trajectories": 600,
+  "valid": true
+}

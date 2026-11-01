@@ -1,0 +1,13 @@
+model,acquisition,aulc,rank,dataset_wins
+lightgbm,entropy,0.8474899570391413,6.2,0.0
+lightgbm,entropy_diversity,0.849303707146357,6.4,0.0
+lightgbm,random,0.8349204325026415,8.4,0.0
+random_forest,entropy,0.8526298574230257,4.2,0.0
+random_forest,entropy_diversity,0.8549131359269944,4.4,3.0
+random_forest,random,0.8453373742611993,6.8,0.0
+tabpfn,entropy,0.8433844029938594,6.0,2.0
+tabpfn,entropy_diversity,0.8574648443922497,3.8,0.0
+tabpfn,random,0.8414152265946038,6.6,0.0
+xgboost,entropy,0.8385859936337874,7.6,0.0
+xgboost,entropy_diversity,0.8441504716528602,7.4,0.0
+xgboost,random,0.829584086827022,10.2,0.0

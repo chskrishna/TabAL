@@ -1,0 +1,7 @@
+PyTDC==1.1.15
+rdkit==2023.9.6
+scikit-learn==1.7.2
+numpy==1.26.4
+pandas==2.2.3
+PyYAML==6.0.2
+pytest==8.4.1

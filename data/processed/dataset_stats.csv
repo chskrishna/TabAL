@@ -1,0 +1,6 @@
+dataset,raw_rows,invalid_rows_removed,identical_duplicate_rows_collapsed,conflicting_duplicate_groups,conflicting_duplicate_rows_removed,final_samples,positive_prevalence,pool_samples,test_samples,scaffold_count,pool_scaffold_count,test_scaffold_count,rdkit2d_features
+DILI,475,0,0,0,0,475,0.4968421052631579,379,96,311,231,80,210
+HIA_Hou,578,0,0,0,0,578,0.8650519031141869,461,117,385,317,68,210
+Bioavailability_Ma,640,0,0,0,0,640,0.76875,512,128,440,347,93,210
+Pgp_Broccatelli,1218,0,6,0,0,1212,0.5338283828382838,969,243,682,547,135,210
+BBB_Martins,2030,0,45,10,20,1965,0.7633587786259542,1571,394,1020,832,188,210

@@ -1,0 +1,27 @@
+\begin{tabular}{llllrrrr}
+\toprule
+left_model & left_acquisition & right_model & right_acquisition & mean_paired_difference & ci95_low & ci95_high & n_pairs \\
+\midrule
+tabpfn & random & random_forest & random & -0.0039 & -0.0113 & 0.0031 & 50 \\
+tabpfn & random & xgboost & random & 0.0118 & 0.0049 & 0.0184 & 50 \\
+tabpfn & random & lightgbm & random & 0.0065 & -0.0001 & 0.0130 & 50 \\
+tabpfn & entropy & random_forest & entropy & -0.0092 & -0.0191 & -0.0002 & 50 \\
+tabpfn & entropy & xgboost & entropy & 0.0048 & -0.0048 & 0.0134 & 50 \\
+tabpfn & entropy & lightgbm & entropy & -0.0041 & -0.0148 & 0.0049 & 50 \\
+tabpfn & entropy_diversity & random_forest & entropy_diversity & 0.0026 & -0.0064 & 0.0111 & 50 \\
+tabpfn & entropy_diversity & xgboost & entropy_diversity & 0.0133 & 0.0039 & 0.0223 & 50 \\
+tabpfn & entropy_diversity & lightgbm & entropy_diversity & 0.0082 & 0.0004 & 0.0155 & 50 \\
+tabpfn & entropy & tabpfn & random & 0.0020 & -0.0091 & 0.0123 & 50 \\
+tabpfn & entropy_diversity & tabpfn & random & 0.0160 & 0.0058 & 0.0274 & 50 \\
+tabpfn & entropy_diversity & tabpfn & entropy & 0.0141 & -0.0000 & 0.0302 & 50 \\
+random_forest & entropy & random_forest & random & 0.0073 & 0.0008 & 0.0137 & 50 \\
+random_forest & entropy_diversity & random_forest & random & 0.0096 & 0.0029 & 0.0169 & 50 \\
+random_forest & entropy_diversity & random_forest & entropy & 0.0023 & -0.0068 & 0.0121 & 50 \\
+xgboost & entropy & xgboost & random & 0.0090 & -0.0012 & 0.0186 & 50 \\
+xgboost & entropy_diversity & xgboost & random & 0.0146 & 0.0055 & 0.0235 & 50 \\
+xgboost & entropy_diversity & xgboost & entropy & 0.0056 & -0.0046 & 0.0163 & 50 \\
+lightgbm & entropy & lightgbm & random & 0.0126 & 0.0030 & 0.0217 & 50 \\
+lightgbm & entropy_diversity & lightgbm & random & 0.0144 & 0.0066 & 0.0223 & 50 \\
+lightgbm & entropy_diversity & lightgbm & entropy & 0.0018 & -0.0077 & 0.0120 & 50 \\
+\bottomrule
+\end{tabular}
