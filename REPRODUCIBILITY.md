@@ -1,8 +1,9 @@
 # Reproducibility guide
 
-## Frozen protocol
+## Current precursor protocol
 
-`config_representation.yaml` is the authoritative full benchmark:
+`config_representation.yaml` reproduces the currently archived single-split
+precursor benchmark:
 
 - five TDC binary ADMET datasets;
 - scaffold split with seed 42 and 70/10/20 train/validation/test fractions;

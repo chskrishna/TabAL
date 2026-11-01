@@ -1,7 +1,9 @@
 # Result artifacts
 
-The full public benchmark has passed `analyze_results.py --validate-only` for
-both representations: 600 trajectories and 15 budgets per trajectory.
+The current single-split precursor benchmark has passed
+`analyze_results.py --validate-only` for both representations: 600 trajectories
+and 15 budgets per trajectory. These files are not the paper's final
+three-split 2,700-trajectory release.
 
 ## Raw schemas
 

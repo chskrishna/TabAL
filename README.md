@@ -1,17 +1,38 @@
-# TabAL
+# TabAL: Importance of Representation in Molecular Tabular Active Learning
 
-Official code and results for **“Do Tabular Foundation Models Improve Molecular
-Active Learning? A Controlled Study on Scaffold-Split ADMET Tasks.”**
+## Abstract
 
-TabAL compares TabPFN, random forests, XGBoost, and LightGBM in pool-based
-molecular active learning. The benchmark uses five TDC ADMET classification
-tasks, scaffold-held-out test sets, two molecular representations (ECFP4 and
-RDKit2D), three acquisition policies, and ten paired seeds.
+In molecular active learning, molecular representation shapes both model
+predictions on small labeled sets and the selection of subsequent queries. To
+quantify this dependence, we compare 1,024-bit ECFP4 fingerprints against 210
+RDKit2D descriptors for TabPFN v2.5, Random Forest, XGBoost, and LightGBM across
+five binary molecular-property tasks, three scaffold splits, and three
+acquisition policies (2,700 trajectories total). Measuring label efficiency
+from 32 to 256 labels via normalized area under the AUROC learning curve
+(AULC), we find that RDKit2D outperforms ECFP4 by 0.0746 (95% bootstrap
+interval 0.0633 to 0.0861), with positive gains across every learner–policy
+pairing and task–split partition. Crucially, changing representations reshuffles
+model rankings: TabPFN exhibits the largest gain from RDKit2D, while Random
+Forest achieves the highest overall AULC. We then dissect this gap through
+fingerprint compression controls and acquisition replay. Neither 256-bit
+fingerprints nor 210-dimensional Gaussian projections reproduce the descriptor
+advantage, confirming that lower dimensionality alone does not explain the
+gain. Moreover, when models are trained on identical fingerprint-acquired
+molecule sequences, RDKit2D still improves AULC by 0.0875 for TabPFN and 0.0657
+for Random Forest, whereas differences from the query sequences themselves
+remain small and predictor-dependent. Because representation effects
+consistently surpass acquisition-policy gains, fair comparisons of molecular
+active learners require evaluation across multiple representations.
 
-## Main result
+## Repository status
 
-The public result files contain **1,200 validated learning trajectories**
+The currently archived result files are the validated **single-split precursor**
+to the paper: **1,200 learning trajectories**
 (600 per representation), each evaluated at 15 label budgets from 32 to 256.
+They do not yet contain the paper's three-split 2,700-trajectory benchmark,
+compression controls, or acquisition-replay experiments. Consequently, the
+paper-level effect estimates in the abstract must not be reconstructed from the
+current CSV files.
 
 | Representation | Best model | Acquisition | Macro AULC |
 |---|---|---|---:|
@@ -107,8 +128,9 @@ hardware notes, and integrity checks are in
 
 ## Citation
 
-Please cite the paper title above. The archival BibTeX entry will be added when
-the paper identifier is public.
+Please cite **“TabAL: Importance of Representation in Molecular Tabular Active
+Learning.”** The archival BibTeX entry will be added when the paper identifier
+is public.
 
 ## License
 
