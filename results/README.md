@@ -39,3 +39,7 @@ difference plots in PNG and PDF formats.
 
 The `ecfp4_*` and `rdkit2d_*` prefixes identify the predictive representation;
 both sets use the same four models and frozen public protocol.
+
+`figures_precursor/` contains the regenerated cross-representation figure set,
+captions, and the paired bootstrap effect table. Every filename and caption
+identifies these outputs as single-split precursor results.

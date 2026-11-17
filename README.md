@@ -44,6 +44,20 @@ but becomes the best macro-AULC configuration with precomputed RDKit2D
 descriptors. See [`results/README.md`](results/README.md) for schemas and
 artifact provenance.
 
+## Figures
+
+Publication-style figures for the archived precursor can be regenerated with:
+
+```bash
+python make_precursor_figures.py
+```
+
+The outputs and self-contained captions are in
+[`results/figures_precursor`](results/figures_precursor). Their filenames and
+captions explicitly identify them as precursor figures; final paper figures for
+the compression and acquisition-replay experiments require the missing final
+artifacts.
+
 ## Repository layout
 
 ```text

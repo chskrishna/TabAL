@@ -63,3 +63,13 @@ For each representation, the repository contains:
 Generated datasets (`data/raw`, `data/processed/*.npz`) and the TabPFN
 checkpoint are intentionally excluded because their providers govern
 redistribution. Recreate them with `prepare_data.py` and `fetch_checkpoint.py`.
+
+## Precursor figures
+
+```bash
+python make_precursor_figures.py --check-only
+python make_precursor_figures.py
+```
+
+The script validates exact trajectory pairing before producing vector PDF and
+300-dpi PNG outputs in `results/figures_precursor/`.

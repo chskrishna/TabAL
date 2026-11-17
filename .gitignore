@@ -33,4 +33,6 @@ results/*.tmp
 !results/figures_ecfp4/**
 !results/figures_rdkit2d/
 !results/figures_rdkit2d/**
+!results/figures_precursor/
+!results/figures_precursor/**
 results/*smoke*
